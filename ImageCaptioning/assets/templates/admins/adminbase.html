@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>project</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<!-- Goggle Font -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+	<!-- Font Css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<!-- Animation Css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+</head>
+<body>
+<!-- Header -->
+<div class="header-div">
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header logo-div bounceInLeft wow" data-wow-duration="2s">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Image Captioning</a>
+    </div>
+    <div class="collapse navbar-collapse top-right-menu-ul bounceInRight wow" id="bs-example-navbar-collapse-1" data-wow-duration="4s">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'AdminHome' %}">Home</a></li>
+        <li><a href="{% url 'RegisterUsersView' %}">UserDetails</a></li>
+          <li><a href="{% url 'AdminViewCaptions' %}">Captions</a></li>
+        <li><a href="{% url 'index' %}">Logout</a></li>
+      </ul>
+    </div><!-- End navbar-collapse -->
+  </div><!-- End container -->
+</nav>
+<div class="container wow bounceInDown" data-wow-duration="5s">
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8 text-center slide-text">
+		<h1>Image Captioning using Convolutional Neural Networks and Recurrent Neural Network</h1>
+		</div><!-- End col-md-8-->
+		<div class="col-md-offset-2"></div><!-- End col-md-offset-2 -->
+	</div><!-- End Row -->
+</div><!-- End Contanier -->
+</div><!-- End header-div -->
+ {%block contents%}
+
+
+
+ {%endblock%}
+
+<footer>
+    <div class="container">
+    	<div class="row">
+        </div> <br><br> <br><br><br> <br><br><br>
+        <div class="row">
+            <div class="col-sm-12 footer-copyright">
+            	Copyrights@2021 Anilkumar peddabayi</a>.
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+<script type="text/javascript" src="{% static 'js/jquery-main.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script>
+	new WOW().init();
+</script>
+</body>
+</html>
